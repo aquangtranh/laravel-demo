@@ -1,7 +1,5 @@
 <h1>Create user form</h1>
-@if(isset($category))
-    <h2>{{$category}}</h2>
-@endif
+<h2>{{$category}}</h2>
 <form method="post" action="{{ route('users.store') }}">
     @csrf
     <label>Username</label>

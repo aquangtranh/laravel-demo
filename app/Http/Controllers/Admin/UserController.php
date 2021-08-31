@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\User;
-// use App\Http\Controllers\Admin\CategoryController;
 
 class UserController extends Controller
 {
@@ -13,20 +12,12 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        // $cate  = Category::all();
-        $data = $request->all();
-        $data = $request->only('search', 'sort');
-        $data = $request->except('search');
-        // $data = request()->all(); //array
-        // $data = request()->only(['search', 'sort']); //array
-        // $data = request()->except('search'); //array
-        // dd($data);
-        $users = User::all();// laays all user in users table
-        // dd($users->toArray());
-        return view('list-user')->with(['users' => $users]);
+        //
     }
+
+    public function action(){ }
 
     /**
      * Show the form for creating a new resource.
@@ -35,8 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        // $cate  = Category::all();
-        return view('form-create-user');
+        //
     }
 
     /**
@@ -47,9 +37,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        // dd($data);
-        //code insert vaof database
+        //
     }
 
     /**
@@ -58,24 +46,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request, User $user)
+    public function show($id)
     {
-        // $cate  = Category::all();
-        dd($user);
-        $data = $request->all();
-        dd($data);
-        return 'this is user'. $id;
+        //
     }
 
-    public function showFriend($id,$friendID)
-    {
-        return 'this is friend '. $friendID . 'of '. 'user '. $id;
-    }
-
-    public function resetPassword($id)
-    {
-        return 'this is reset password page for user '. $id;
-    }
     /**
      * Show the form for editing the specified resource.
      *

@@ -68,16 +68,11 @@
             
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
-                    @if(isset($category))
-                        <h2>{{$category}}</h2>
-                    @endif
+                    <h1>Master layout</h1>
+                @yield('content')
                 
                 </div>
-                <a href ="{{ route('frontend.users.index') }}">list user page </a>
-                <a href ="{{ route('frontend.users.show', 1) }}">user 1 page </a>
-                <a href ="{{ route('frontend.users.show-friend', ['id' => 1, 'friendID' =>2]) }}">user 1 page </a>
-
+            
 
             </div>
         </div>

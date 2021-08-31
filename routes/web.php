@@ -24,7 +24,7 @@ Route::group([
     // 'namespace' => 'Admin',
     // 'middleware' => 'isAdmin'
 ], function(){
-    Route::get('/nguoidung', 'UserController@index')->name('users.index');
+    Route::get('/users', 'UserController@index')->name('users.index');
     Route::get('/users/{id?}', 'UserController@show')->name('users.show');
     Route::get('/users/{id}/friends/{friendID}', 'UserController@showFriend')->name('users.show-friend');
 });
@@ -49,3 +49,4 @@ Route::get('get-signed-url', function(){
 
 Route::get('/users/create', 'UserController@create')->name('users.create');
 Route::post('/users', 'UserController@store')->name('users.store');
+Route::get('users/{user}', 'UserController@show')->name('users.show');
